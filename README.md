@@ -1,6 +1,6 @@
 # qa-cypress
 
-For open de Cypress Open execute the command:
+For open the Cypress App execute the command:
 ```
 npx cypress open
 ```
