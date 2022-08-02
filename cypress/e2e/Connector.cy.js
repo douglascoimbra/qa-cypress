@@ -2,6 +2,7 @@ import LoginTest from '../support/class/login'
 import Connector from '../support/class/connector'
 import StagingTable from '../support/class/staging'
 import SendIntake from '../support/class/sendIntake'
+import Etl from '../support/class/etl'
 
 
 
@@ -27,7 +28,16 @@ describe('Test Connector - Carol', () => {
     SendIntake.SendingIntake()
   })
 
+  it('Create Duplicate ETL', () => {
+    Etl.Duplicate()
+  })  
+
+  it('Create Join ETL', () => {
+    Etl.Join()
+  })
+  
+  it('Create Split ETL', () => {
+    Etl.Split()
+  })  
+
 })
-
-
-

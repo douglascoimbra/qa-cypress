@@ -4,6 +4,7 @@ module.exports = defineConfig({
   e2e: {
 
     baseUrl: 'https://totvsbettio.qarol.ai',
-    watchForFileChanges: false
+    watchForFileChanges: false,
+    defaultCommandTimeout: 10000
   },
 });
