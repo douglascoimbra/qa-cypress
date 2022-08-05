@@ -1,4 +1,4 @@
-# qa-cypress
+# QA-CYPRESS
 
 For open the Cypress App execute the command:
 ```
