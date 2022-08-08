@@ -9,6 +9,7 @@ class Etl {
         cy.get('#output_0').clear().type('DuplicateTest')
         cy.get('.cw-btn-primary').click()
         cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.wait(2000)
         cy.contains('ETL published').should('be.visible')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }    
@@ -29,6 +30,7 @@ class Etl {
         cy.get('#output-0').clear().type('JoinTest')
         cy.get(':nth-child(1) > .cw-btn-primary').click()
         cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.wait(2000)
         cy.contains('ETL published').should('be.visible')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }    
@@ -46,6 +48,7 @@ class Etl {
         cy.get('#output2-0').clear().type('SplitTestOther')
         cy.get(':nth-child(1) > .cw-btn-primary').click()
         cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.wait(2000)
         cy.contains('ETL published').should('be.visible')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }      
