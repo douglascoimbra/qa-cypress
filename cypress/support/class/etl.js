@@ -9,6 +9,7 @@ class Etl {
         cy.get('#output_0').clear().type('DuplicateTest')
         cy.get('.cw-btn-primary').click()
         cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.wait(2000)
         cy.contains('ETL published').should('be.visible')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }    
@@ -24,11 +25,12 @@ class Etl {
         cy.get('.option__value').click()
         cy.get(':nth-child(3) > cw-toggle-staging-lookup > [cwtooltip="Staging Tables that are mapped or have an ETL cannot be set as Lookup tables"] > cw-toggle.ng-untouched > .wrapper > .toggle').click()
         cy.contains('Lookup updated').should('be.visible')
-        cy.get('#field-0').select('field_base64').should('have.value', 'field_base64')
-        cy.get('#target-field-0').select('field_base64').should('have.value', 'field_base64')
+        cy.get('#field-0').select('field_string').should('have.value', 'field_string')
+        cy.get('#target-field-0').select('field_string').should('have.value', 'field_string')
         cy.get('#output-0').clear().type('JoinTest')
         cy.get(':nth-child(1) > .cw-btn-primary').click()
         cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.wait(2000)
         cy.contains('ETL published').should('be.visible')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }    
@@ -46,6 +48,7 @@ class Etl {
         cy.get('#output2-0').clear().type('SplitTestOther')
         cy.get(':nth-child(1) > .cw-btn-primary').click()
         cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.wait(2000)
         cy.contains('ETL published').should('be.visible')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }      

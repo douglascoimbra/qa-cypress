@@ -1,7 +1,7 @@
 class Connector{
         ConnectorName(){
             cy.get('.accord > :nth-child(2) > button.ng-star-inserted').click()
-            cy.get('div.ng-tns-c298-4 > .options > :nth-child(1) > .options__label').click()
+            cy.get('div.ng-tns-c297-4 > .options > :nth-child(1) > .options__label').click()
             cy.get('.title__actions > .sp-row-xs > .sp-row__item').click()
             cy.get('.gs-col-4 > .sp-mb-sm').click()
             cy.get('.cw-form-action > .cw-btn-primary').click()
