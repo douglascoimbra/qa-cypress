@@ -1,10 +1,10 @@
-import LoginTest from '../support/class/loginOrg'
+import Login from '../support/class/login'
 
 
 describe('Org Admin Users - Carol', () => {
 
   it('Login', () => {
-    LoginTest.accessLogin()
+    Login.LoginAdminOrg()
   })
 
   it('Open Manage Users', () => {

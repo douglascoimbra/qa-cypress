@@ -1,10 +1,10 @@
-import LoginTest from '../support/class/login'
+import Login from '../support/class/login'
 
 
 describe('Validate Homepage - Carol', () => {
 
   it('Login', () => {
-    LoginTest.accessLogin()
+    Login.accessLogin()
   })
 
   it('Total Golden Records', () => {

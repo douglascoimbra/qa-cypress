@@ -8,9 +8,9 @@ class Etl {
         cy.get('cw-dropdown.sp-row__item > .ddown-parent > .ddown > .cw-list-options > :nth-child(1) > .cw-list-option').click()
         cy.get('#output_0').clear().type('DuplicateTest')
         cy.get('.cw-btn-primary').click()
-        cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.get('button:contains(Publish)').should('exist').click()
         cy.wait(2000)
-        cy.contains('ETL published').should('be.visible')
+        cy.contains('ETL published').should('exist')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }    
 
@@ -29,15 +29,15 @@ class Etl {
         cy.get('#target-field-0').select('field_string').should('have.value', 'field_string')
         cy.get('#output-0').clear().type('JoinTest')
         cy.get(':nth-child(1) > .cw-btn-primary').click()
-        cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.get('button:contains(Publish)').should('exist').click()
         cy.wait(2000)
-        cy.contains('ETL published').should('be.visible')
+        cy.contains('ETL published').should('exist')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }    
 
     Split(){
         cy.get('.sp-p-sm > cw-filter > .search__refresh').click()
-        cy.get('.js-staging--stagingtest > .sp-row__item').click()
+        cy.get('.js-staging--stagingtest > .sp-row__item').click({multiple:true})
         cy.wait(10000)
         cy.get('.ddown-parent > :nth-child(1) > .cw-btn').click()
         cy.get('cw-dropdown.sp-row__item > .ddown-parent > .ddown > .cw-list-options > :nth-child(3) > .cw-list-option').click()
@@ -47,9 +47,9 @@ class Etl {
         cy.get('#output1-0').clear().type('SplitTest')
         cy.get('#output2-0').clear().type('SplitTestOther')
         cy.get(':nth-child(1) > .cw-btn-primary').click()
-        cy.get('button:contains(Publish)').should('be.visible').click()
+        cy.get('button:contains(Publish)').should('exist').click()
         cy.wait(2000)
-        cy.contains('ETL published').should('be.visible')
+        cy.contains('ETL published').should('exist')
         cy.get(':nth-child(3) > .cw-trail-link').click()
     }      
 
