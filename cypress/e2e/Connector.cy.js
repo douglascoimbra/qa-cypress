@@ -1,4 +1,4 @@
-import LoginTest from '../support/class/login'
+import Login from '../support/class/login'
 import Connector from '../support/class/connector'
 import StagingTable from '../support/class/staging'
 import SendIntake from '../support/class/sendIntake'
@@ -9,7 +9,7 @@ import Etl from '../support/class/etl'
 describe('Test Connector - Carol', () => {
 
   it('Login', () => {
-    LoginTest.accessLogin()
+    Login.accessLogin()
    })
 
   it('Creating a Connector', () => {
