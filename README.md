@@ -31,5 +31,5 @@ git checkout -b '<JIRA ISSUE>'
 
 For further information please follow the Cypress Documentation
 
-[https://docs.cypress.io/guides/getting-started/installing-cypress] (Cypress DOCS)
+[Cypress DOCS](https://docs.cypress.io/guides/getting-started/installing-cypress)
 
