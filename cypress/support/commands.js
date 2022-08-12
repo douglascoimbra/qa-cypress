@@ -55,3 +55,11 @@ Cypress.Commands.add('authorizationToken', () => {
            })
      }
 )
+
+Cypress.Commands.add('openExploreDataModel', (dataModel) => {
+   cy.get(':nth-child(6) > button.ng-star-inserted').click()
+   cy.get('div.ng-tns-c297-6 > .options > :nth-child(1) > .options__label').click()
+   cy.wait(1000)
+   cy.contains(dataModel).scrollIntoView();
+   cy.contains(dataModel).click();
+})
