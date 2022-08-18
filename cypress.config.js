@@ -1,10 +1,11 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  video: false,
   e2e: {
 
-    baseUrl: 'https://totvsbettio.qarol.ai',
+    baseUrl: 'https://totvscypress.qarol.ai',
     watchForFileChanges: false,
-    defaultCommandTimeout: 10000
+    defaultCommandTimeout: 20000
   },
 });

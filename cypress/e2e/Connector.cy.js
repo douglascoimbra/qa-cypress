@@ -31,7 +31,7 @@ describe('Test Connector - Carol', () => {
   it('Create Duplicate ETL', () => {
     Etl.Duplicate()
   })  
-
+/*
   it('Create Join ETL', () => {
     Etl.Join()
   })
@@ -39,5 +39,5 @@ describe('Test Connector - Carol', () => {
   it('Create Split ETL', () => {
     Etl.Split()
   })  
-
+*/
 })
