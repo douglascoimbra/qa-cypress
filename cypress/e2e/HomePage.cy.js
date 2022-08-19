@@ -12,8 +12,8 @@ describe('Validate Homepage - Carol', () => {
   })
 
   it('Staging Tables', () => {
-      cy.contains('Staging Tables').should('be.visible')
-    })
+     cy.contains('Staging Tables').should('be.visible')
+  })
 
   it('Storage used', () => {
       cy.contains('Storage used').should('be.visible')
