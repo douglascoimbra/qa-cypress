@@ -10,7 +10,8 @@ steps:
       queue: "nodejs-16"
       dind: false
     timeout_in_minutes: 60
-    
+  - wait:
+    continue_on_failure: true
   - name: "Artifact"
     label: ":cypress: Artifacts"
     command: "true"
