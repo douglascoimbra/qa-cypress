@@ -6,7 +6,7 @@ steps:
       apt-get update -qy && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -qy
       npm install cypress --save-dev
       npx cypress run --key $CYPRESS_KEY
-      RESULT=$(echo $\?)
+      export RESULT=$(echo $?)
       if [ $RESULT -eq 0 ]; then
       echo "Tests succeeded"
       else
