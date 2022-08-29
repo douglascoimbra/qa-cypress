@@ -1,5 +1,6 @@
 steps:
   - name: "Cypress"
+    key: tests
     label: ":cypress: Cypress"
     command: |
       apt-get update -qy && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -qy
@@ -17,6 +18,7 @@ steps:
       dind: false
     timeout_in_minutes: 60
     if: build.state != "passed"
+    depends_on: "tests"
     artifact_paths: 
     - "totvslabs/qa-cypress/cypress/screenshots/**/*"
  
