@@ -1,5 +1,6 @@
 steps:
-  - label: ":cypress: Cypress"
+  - name: "Cypress"
+    label: ":cypress: Cypress"
     command: |
       apt-get update -qy && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -qy
       npm install cypress --save-dev
@@ -9,7 +10,8 @@ steps:
       dind: false
     timeout_in_minutes: 60
     
-  - label: ":cypress: Artifacts"
+  - name: "Artifact"
+    label: ":cypress: Artifacts"
     agents:
       queue: "nodejs-16"
       dind: false
