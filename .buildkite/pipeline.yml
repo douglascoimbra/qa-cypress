@@ -8,5 +8,13 @@ steps:
       queue: "nodejs-16"
       dind: false
     timeout_in_minutes: 60
+    
+  - label: ":cypress: Artifacts"
+    agents:
+      queue: "nodejs-16"
+      dind: false
+    timeout_in_minutes: 60
+    if: build.state != "passed"
     artifact_paths: 
     - "totvslabs/qa-cypress/cypress/screenshots/**/*"
+ 
