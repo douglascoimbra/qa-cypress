@@ -5,21 +5,14 @@ steps:
     command: |
       apt-get update -qy && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -qy
       npm install cypress --save-dev
-      npx cypress run --key $CYPRESS_KEY
+      if ($(npx cypress run --key $CYPRESS_KEY)) ; then
+      echo "Tests succeeded"
+      else
+      echo "Tests Failed uploading artifacts"
+      buildkite-agent artifact upload "totvslabs/qa-cypress/cypress/screenshots/**/*" || exit 0
+      fi
     agents:
       queue: "nodejs-16"
       dind: false
     timeout_in_minutes: 60
-  - wait:
-    continue_on_failure: true
-  - name: "Artifact"
-    label: ":cypress: Artifacts"
-    command: "true"
-    agents:
-      queue: "nodejs-16"
-      dind: false
-    timeout_in_minutes: 60
-    if: build.state != "passed"
-    artifact_paths: 
-    - "totvslabs/qa-cypress/cypress/screenshots/**/*"
  
