@@ -13,6 +13,7 @@ steps:
     
   - name: "Artifact"
     label: ":cypress: Artifacts"
+    command: "true"
     agents:
       queue: "nodejs-16"
       dind: false
