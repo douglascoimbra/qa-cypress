@@ -6,11 +6,10 @@ steps:
       apt-get update -qy && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -qy
       npm install cypress --save-dev
       npx cypress run --key $CYPRESS_KEY && export RESULT="$$?" || export RESULT="$$?"
-      if [[ "$$RESULT" != "0" ]]; then 
-        buildkite-agent artifact upload "totvslabs/qa-cypress/cypress/screenshots/**/*" && exit 1
+      if [[ $RESULT != "0" ]]; then 
+        buildkite-agent artifact upload "totvslabs/qa-cypress/cypress/screenshots/*/*.png" && exit 1
       fi
     agents:
       queue: "nodejs-16"
       dind: false
     timeout_in_minutes: 60
- 
