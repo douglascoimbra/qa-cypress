@@ -9,4 +9,3 @@ steps:
       queue: "nodejs-16"
       dind: false
     timeout_in_minutes: 60
-    
