@@ -1,7 +1,6 @@
 steps:
   - label: ":cypress: Cypress"
     command: |
-      export HOME="/root"
       npx cypress run --key $CYPRESS_KEY && export RESULT="$$?" || export RESULT="$$?"
       if [[ "$RESULT" != "0" ]]; then 
         buildkite-agent artifact upload "cypress/screenshots/**/*" && exit 1
